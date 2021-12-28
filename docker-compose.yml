@@ -25,30 +25,31 @@ services:
             - ./wordpress:/var/www/html
             - ./docker/install_wordpress.sh:/usr/local/bin/install_wordpress
             - ./docker/migratedb_import.sh:/usr/local/bin/migratedb_import
-            - ./docker/postlightheadlesswpstarter.wordpress.xml:/var/www/postlightheadlesswpstarter.wordpress.xml
+            # - ./docker/postlightheadlesswpstarter.wordpress.xml:/var/www/postlightheadlesswpstarter.wordpress.xml
+            - ./docker/ascreative.WordPress.2021-12-27.xml:/var/www/ascreative.WordPress.2021-12-27.xml
             - ./docker/images:/var/www/images
             - ./docker/plugins:/var/www/plugins
-    frontend:
-        command: bash -c 'yarn && yarn start'
-        container_name: frontend
-        expose:
-            - '3004'
-        image: node:17
-        ports:
-            - '3004:3004'
-        user: node
-        volumes:
-            - ./frontend:/home/node/app
-        working_dir: /home/node/app
-    frontend-graphql:
-        command: bash -c 'yarn && yarn start'
-        container_name: frontend-graphql
-        expose:
-            - '3005'
-        image: node:14
-        ports:
-            - '3005:3005'
-        user: node
-        volumes:
-            - ./frontend-graphql:/home/node/app
-        working_dir: /home/node/app
+    # frontend:
+    #     command: bash -c 'yarn && yarn start'
+    #     container_name: frontend
+    #     expose:
+    #         - '3004'
+    #     image: node:17
+    #     ports:
+    #         - '3004:3004'
+    #     user: node
+    #     volumes:
+    #         - ./frontend:/home/node/app
+    #     working_dir: /home/node/app
+    # frontend-graphql:
+    #     command: bash -c 'yarn && yarn start'
+    #     container_name: frontend-graphql
+    #     expose:
+    #         - '3005'
+    #     image: node:14
+    #     ports:
+    #         - '3005:3005'
+    #     user: node
+    #     volumes:
+    #         - ./frontend-graphql:/home/node/app
+    #     working_dir: /home/node/app
