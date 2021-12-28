@@ -52,8 +52,8 @@ Once the containers are running, you can visit the React frontends and backend W
 
 This starter kit provides two frontend containers:
 
-- `frontend` container powered by the WP REST API is server-side rendered using Next.js, and exposed on port `3000`: [http://localhost:3000](http://localhost:3000)
-- `frontend-graphql` container powered by GraphQL, exposed on port `3001`: [http://localhost:3001](http://localhost:3001)
+- `frontend` container powered by the WP REST API is server-side rendered using Next.js, and exposed on port `3000`: [http://localhost:3004](http://localhost:3004)
+- `frontend-graphql` container powered by GraphQL, exposed on port `3005`: [http://localhost:3005](http://localhost:3005)
 
 Here's what the frontend looks like:
 

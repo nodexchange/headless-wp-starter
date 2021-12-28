@@ -119,8 +119,8 @@ class Index extends Component {
             <div className="api-info b mt4">
               Starter Kit supports both REST API and GraphQL
               <div className="api-toggle">
-                <a className="rest" href="http://localhost:3000">REST API</a>
-                <a className="graphql" href="http://localhost:3001">GraphQL</a>
+                <a className="rest" href="http://localhost:3004">REST API</a>
+                <a className="graphql" href="http://localhost:3005">GraphQL</a>
               </div>
             </div>
           </div>

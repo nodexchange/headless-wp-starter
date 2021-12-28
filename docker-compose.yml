@@ -32,10 +32,10 @@ services:
         command: bash -c 'yarn && yarn start'
         container_name: frontend
         expose:
-            - '3000'
+            - '3004'
         image: node:17
         ports:
-            - '3000:3000'
+            - '3004:3004'
         user: node
         volumes:
             - ./frontend:/home/node/app
@@ -44,10 +44,10 @@ services:
         command: bash -c 'yarn && yarn start'
         container_name: frontend-graphql
         expose:
-            - '3001'
+            - '3005'
         image: node:14
         ports:
-            - '3001:3001'
+            - '3005:3005'
         user: node
         volumes:
             - ./frontend-graphql:/home/node/app
