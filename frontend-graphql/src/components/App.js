@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
@@ -9,19 +9,21 @@ import Page from './Page';
 import Post from './Post';
 import Category from './Category';
 
-export default () => (
-  <div className="center">
+function App() {
+  return <div className="center">
     <Header />
     <div className="">
-      <Switch>
+      <Routes>
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/search" component={Search} />
         <Route exact path="/page/:slug" component={Page} />
         <Route exact path="/post/:slug" component={Post} />
         <Route exact path="/category/:slug" component={Category} />
-      </Switch>
+      </Routes>
     </div>
     <Footer />
   </div>
-);
+}
+
+export default App;

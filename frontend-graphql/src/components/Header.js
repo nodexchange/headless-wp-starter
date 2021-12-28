@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
 import { withApollo } from 'react-apollo';
 import { compose } from 'recompose';
 import gql from 'graphql-tag';
@@ -26,9 +25,13 @@ const MENU_QUERY = gql`
 const isInternal = urltype => urltype.includes('internal');
 
 class Header extends Component {
-  state = {
-    menus: [],
-  };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      menus: [],
+    };
+  }
 
   componentDidMount() {
     this.executeMenu();
@@ -121,6 +124,5 @@ class Header extends Component {
 }
 
 export default compose(
-  withRouter,
   withApollo,
 )(Header);
